@@ -37,7 +37,7 @@ def generate_word_report(excel_data, output_docx, output_pdf):
 
     # Save the newly created Word document
     doc.save(output_docx)
-    # print(f"Word document saved as: {output_docx}")
+    print(f"Word document saved as: {output_docx}")
 
     # Convert the Word document to PDF
     convert_to_pdf(output_docx, output_pdf)
@@ -61,12 +61,8 @@ if __name__ == "__main__":
     output_docx = 'C:\\Users\\admin\\Desktop\\updated_document.docx'
     output_pdf = 'C:\\Users\\admin\\Desktop\\output.pdf'
 
-    # print("Starting Excel to Word to PDF script.")
-
     # Step 1: Read data from Excel
     excel_data = read_excel(excel_file, sheet_name)
-    # print("Excel data loaded.")
 
     # Step 2: Generate Word report and save as PDF
     generate_word_report(excel_data, output_docx, output_pdf)
-    # print("Process completed successfully.")
